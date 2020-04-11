@@ -1,0 +1,4 @@
+credit:
+    resource: "@CreditBundle/Controller/"
+    type:     annotation
+    prefix:   /

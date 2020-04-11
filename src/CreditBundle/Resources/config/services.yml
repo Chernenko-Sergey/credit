@@ -1,0 +1,12 @@
+services:
+    credit.customer_handler:
+        class: "%credit.customer_handler.class%"
+        arguments:
+            - "%credit.customer_handler.remote_url%"
+            - "%credit.customer_handler.post_type%"
+            - "%credit.customer_handler.default_data%"
+            - "%credit.customer_handler.score_map%"
+            - "%credit.customer_handler.default_score%"
+
+    credit.current_time:
+        class: "%credit.current_time.class%"
