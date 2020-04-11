@@ -1,0 +1,21 @@
+parameters:
+    credit.customer_handler.class:      CreditBundle\Services\CustomerHandler
+    credit.customer_handler.remote_url: Https://www.example.com/credit/user
+    credit.customer_handler.post_type:  application/json
+    credit.customer_handler.default_data:
+        firstName:    Vasya
+        lastName:     Pupkin
+        dateOfBirth:  1984-07-31
+        Salary:       1000
+        creditScore:  good
+    credit.customer_handler.score_map:
+        good: 700
+        bad:  300
+    credit.customer_handler.allowed_remote_statuses:
+        success
+        reject
+        error
+    credit.customer_handler.default_score: 300
+
+    credit.current_time.class: CreditBundle\Services\CurrentTime
+

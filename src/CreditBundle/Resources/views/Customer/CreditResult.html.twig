@@ -1,0 +1,33 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <div id="wrapper">
+        <div id="container">
+            <div id="welcome">
+                <h1>Welcome to Credit middleware</h1>
+            </div>
+
+            <div id="customer">
+                <p> For requested customer <b>{{ customer.firstName }} {{ customer.lastName }}</b> we got results:</p>
+
+                {% for key, value in response %}
+                    <p> {{ key }}: {{ value }} </p>
+                {% endfor %}
+            </div>
+
+            <div id="status">
+                <div>
+                    <p>
+                        Credit
+                        {% if 'success' == response.SubmitDataResult %}
+                            was approved. <b>Congratulations</b>!
+                        {% else %}
+                            wasn't approved. <b>Sorry</b>.
+                        {% endif %}
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+{% endblock %}
